@@ -1,0 +1,16 @@
+{
+  "name": "learning-typescript-erickwendel",
+  "version": "1.0.0",
+  "description": "learning nodejs with typescript and express",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "./node_modules/.bin/tsc --module commonjs --outDir build/ --noImplicitAny --sourceMap --target ES5 lib/index.ts && node build/index.js --watch"
+  },
+  "author": "erickwendel",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.13.3",
+    "typescript": "^1.7.5"
+  }
+}
