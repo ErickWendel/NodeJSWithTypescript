@@ -1,16 +1,23 @@
 {
   "name": "learning-typescript-erickwendel",
   "version": "1.0.0",
-  "description": "learning nodejs with typescript and express",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "npm test",
-    "start": "./node_modules/.bin/tsc --module commonjs --outDir build/ --noImplicitAny --sourceMap --target ES5 lib/index.ts && node build/index.js --watch"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErickWendel/Learning.NodeJSWithTypescript.git"
   },
   "author": "erickwendel",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErickWendel/Learning.NodeJSWithTypescript/issues"
+  },
+  "homepage": "https://github.com/ErickWendel/Learning.NodeJSWithTypescript#readme",
   "devDependencies": {
     "express": "^4.13.3",
-    "typescript": "^1.7.5"
+    "gulp": "^3.9.0",
+    "gulp-tsc": "^1.1.4",
+    "gulp-typescript-compiler": "^1.0.1",
+    "nodemon": "^1.8.1"
   }
 }

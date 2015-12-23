@@ -1,5 +1,4 @@
     /// <reference path="../typings/tsd.d.ts" />
-    /// <reference path="../typings/tsd.d.ts" />
 
     import express = require("express");
     
@@ -11,8 +10,7 @@
         response.send("Hello World!");
     });
 
-
     app.listen(port, () => {
-        console.log("Node app is running at localhost:" + port);
-       ;
+        console.log("Node app is  running at localhost:" + port);
+       
     });
