@@ -1,6 +1,5 @@
 import IRead = require('./../interfaces/IRead');
 import IWrite = require('./../interfaces/IWrite');
-
 class BusinessBase<T> implements IRead<T>, IWrite<T>{
     
     create (item:T) {
@@ -8,6 +7,7 @@ class BusinessBase<T> implements IRead<T>, IWrite<T>{
     }
     
     retrieve () {
+        
         return null;
     }
     

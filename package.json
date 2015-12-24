@@ -18,6 +18,8 @@
     "gulp": "^3.9.0",
     "gulp-tsc": "^1.1.4",
     "gulp-typescript-compiler": "^1.0.1",
+    "mongojs": "^2.2.2",
+    "mongoose": "^4.3.4",
     "nodemon": "^1.8.1"
   }
 }
