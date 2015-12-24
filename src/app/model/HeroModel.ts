@@ -1,7 +1,7 @@
 import BaseModel = require('./base/BaseModel');
 class HeroModel extends BaseModel {
-    public power: string;
-    public amountPeopleSaved: number;
+    private power: string;
+    private amountPeopleSaved: number;
     
     get power () {
         return this.power
