@@ -3,14 +3,14 @@ class HeroModel extends BaseModel {
     private power: string;
     private amountPeopleSaved: number;
     
-    get power () {
+    get power (): string {
         return this.power
     }
     set power (power: string) {
         this.power = power;
     }
     
-    get amountPeopleSaved() {
+    get amountPeopleSaved(): string {
         return this.amountPeopleSaved;
     }
     set amountPeopleSaved(amountPeopleSaved: number) {
