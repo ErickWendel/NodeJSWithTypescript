@@ -1,0 +1,4 @@
+interface IHeroBusiness {
+    
+}
+export = IHeroBusiness;
