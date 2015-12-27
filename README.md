@@ -12,10 +12,11 @@ Patterns and Principles in this project:
 - SOLID Principles
 
 Tools:
-
+- NodeJS
+- TypeScript
 - ExpressJS
-- Mongoose
 - MongoDB
+- Mongoose
 - GulpJS
 - VSCode Task Runners
 
