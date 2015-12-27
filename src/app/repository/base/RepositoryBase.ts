@@ -1,9 +1,11 @@
 import IRead = require('./../interfaces/base/IRead');
 import IWrite = require('./../interfaces/base/IWrite');
 import IHeroModel = require('./../../model/interfaces/IHeroModel');
-import mongoose = require('mongoose');
 
-class RepositoryBase<T> implements IRead<T>, IWrite<T> {
+import mongoose = require('mongoose');
+import ObjectId = mongoose.Types.ObjectId;
+
+class RepositoryBase<T extends mongoose.Document> implements IRead<T>, IWrite<T> {
     
     private _model: mongoose.Model<mongoose.Document>;
     
@@ -11,26 +13,31 @@ class RepositoryBase<T> implements IRead<T>, IWrite<T> {
         this._model = schemaModel;
     }
     
-    
     create (item: T, callback: (error: any, result: any) => void) {
-        this._model.create(item, (erro, success) => callback(erro, success));
+        this._model.create(item, callback);
+        
     }
-    
     
     retrieve (callback: (error: any, result: any) => void) {
-         
+         this._model.find({}, callback)
     }
     
-    update (item: T, callback: (error: any, result: any) => void) {
+    update (_id: ObjectId, item: T, callback: (error: any, result: any) => void) {
+            this._model.update({_id: _id}, item, callback);
+            
+    }
         
+    delete (_id: ObjectId, callback:(error: any, result: any) => void) {
+        this._model.remove({_id: _id}, (err) => callback(err, null));
+       
     }
     
-    delete (id: number, callback:(error: any, result: any) => void) {
-        
+    findById (_id: ObjectId, callback: (error: any, result: T) => void) {
+        this._model.findById( _id.toString(), callback);
     }
     
-    findById (id: number, callback: (error: any, result: T) => void) {
-    
+    findOne(item: Object, callback: (error: any, result: T) => void) {
+        this._model.findOne(item, callback);
     }
     
 }
