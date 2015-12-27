@@ -4,6 +4,7 @@ import IHeroModel = require('./../model/interfaces/IHeroModel');
 import HeroModel = require('./../model/HeroModel');
 import mongoose = require ('mongoose');
 import ObjectId = mongoose.Types.ObjectId;
+
 class HeroBusiness  implements IHeroBusiness {
     private _heroRepository: HeroRepository;
     

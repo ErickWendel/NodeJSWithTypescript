@@ -1,6 +1,7 @@
 import SpartanRepository = require('./../repository/SpartanRepository');
 import ISpartanBusiness = require('./interfaces/ISpartanBusiness');
 import ISpartanModel = require('./../model/interfaces/ISpartanModel');
+
 import mongoose = require('mongoose');
 import ObjectId = mongoose.Types.ObjectId;
 

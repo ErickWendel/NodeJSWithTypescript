@@ -1,8 +1,8 @@
-import IRead = require('./base/IRead');
-import IWrite = require('./base/IWrite');
+
+import IBaseBusiness = require('./base/IBaseBusiness');
 import IHeroModel = require('./../../model/interfaces/IHeroModel');
 
-interface IHeroBusiness extends IRead<IHeroModel>, IWrite<IHeroModel> {
+interface IHeroBusiness extends IBaseBusiness<IHeroModel> {
     
 } 
 export = IHeroBusiness;
