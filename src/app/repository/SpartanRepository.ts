@@ -1,10 +1,14 @@
-import BaseRepository = require('./base/RepositoryBase');
 import SpartanModel = require('./../model/SpartanModel');
+import ISpartanModel = require('./../model/interfaces/ISpartanModel');
+import SpartanSchema = require('./../data_access/schemas/SpartanSchema');
+import RepositoryBase = require('./base/RepositoryBase');
 
-class SpartanRepository extends BaseRepository<SpartanModel> {
+class SpartanRepository  extends RepositoryBase<ISpartanModel> {
+    constructor () {
+        super(SpartanSchema);
+    }
     
 } 
 
-
-Object.seal(SpartanModel);
-export = SpartanModel;
+Object.seal(SpartanRepository);
+export = SpartanRepository;

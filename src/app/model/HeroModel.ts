@@ -1,21 +1,12 @@
-import BaseModel = require('./base/BaseModel');
-class HeroModel extends BaseModel {
-    private power: string;
-    private amountPeopleSaved: number;
-    
-    get power (): string {
-        return this.power
-    }
-    set power (power: string) {
-        this.power = power;
-    }
-    
-    get amountPeopleSaved(): string {
-        return this.amountPeopleSaved;
-    }
-    set amountPeopleSaved(amountPeopleSaved: number) {
-        this.amountPeopleSaved = amountPeopleSaved;
-    }
+import IHeroModel = require('./interfaces/IHeroModel');
+
+class HeroModel {
+   
+   private _heroModel: IHeroModel;
+   
+   constructor(heroModel: IHeroModel) {
+       this._heroModel = heroModel;
+   }
     
 }
 Object.seal(HeroModel);

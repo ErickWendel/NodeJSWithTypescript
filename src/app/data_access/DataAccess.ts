@@ -1,21 +1,30 @@
-    /// <reference path="../typings/tsd.d.ts" />
+    /// <reference path="../../../typings/tsd.d.ts" />
 
-    import Mongoose = require('Mongoose');
+    import Mongoose = require('mongoose');
     import Constants = require('./../../config/constants/Constants');
+    
     class DataAccess {
-        public static db: any;
-        public  static dbConnection: any;
+        static mongooseInstance: any;
+        static mongooseConnection: Mongoose.Connection;
+        
         constructor () {
-            dbConnection  = Mongoose.connection;
-            dbConnection.once('open', () => {
+            DataAccess.connect();
+        }
+        
+        static connect (): Mongoose.Connection {
+            if(this.mongooseInstance) return this.mongooseInstance;
+            
+            this.mongooseConnection  = Mongoose.connection;
+            this.mongooseConnection.once('open', () => {
                 console.log('Conectado.');
             });
-           db = Mongoose.connect(Constants.DB_CONNECTION_STRING);
+            
+           this.mongooseInstance = Mongoose.connect(Constants.DB_CONNECTION_STRING);
+           return this.mongooseInstance;
         }
-       
         
-           
     }
-    //test
-    new DataAccess();
+    
+    DataAccess.connect();
     export = DataAccess;
+     

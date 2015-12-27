@@ -1,22 +1,11 @@
-import BaseModel = require('./base/BaseModel');
+import ISpartanModel = require('./interfaces/ISpartanModel');
 
-class SpartanModel extends BaseModel {
-    private folk: string;
-    private amountPeopleKilled: number;
-    
-    get folk(): string { 
-        return this.folk;
-    }
-    
-    set folk (folk: string) {
-        this.folk;
-    }
-    get amountPeopleKilled(): number {
-        return this.amountPeopleKilled;
-    }
-    set amountPeopleKilled(amountPeopleKilled: number){
-        this.amountPeopleKilled = amountPeopleKilled;
-    }
+class SpartanModel {
+   private _spartanModel: ISpartanModel;
+   
+   constructor(spartan: ISpartanModel) {
+       this._spartanModel = spartan;
+   }
     
 }
 
