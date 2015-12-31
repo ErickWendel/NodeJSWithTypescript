@@ -28,7 +28,7 @@ Run:
 Execution from terminal (OS X):
 
 CREATE
-<br><code>curl -H POST -H "Content-Type: application/json" -d '{"name":"Leonidas King","amountPeopleKilled":120,"folk":"test"}' http://localhost:5000/spartans </code>
+<br><code>curl -H POST -H "Content-Type: application/json" -d '{"name":"Leonidas King","amountPeopleKilled":120,"folk":"test"}' <br> http://localhost:5000/spartans </code>
 <br><code>curl -H POST -H "Content-Type: application/json" -d '{"name":"Goku God","power":"sayan","amountPeopleSaved":2000 }' http://localhost:5000/heroes </code>
 
 RETRIEVE
