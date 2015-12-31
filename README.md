@@ -19,27 +19,30 @@ Tools:
 - VSCode Task Runners
 
 
-Tests:
-    For execution of this project, your need install this node packages:
-    <br><code> npm install </code>
+Run:
+   <br><code> npm install </code>
     
-    if not executing from VSCode, 
-    
-    <br><code> gulp </code>
+   if not executing from VSCode: 
+   <br><code> gulp </code>
 
-Execution:
+Execution from terminal (OS X):
+
 CREATE
-<br><code>curl -H POST -H "Content-Type: application/json" -d '{"name":"CREATED","amountPeopleKilled":2,"folk":"test"}' http://localhost:5000/spartans </code>
-<br><code>curl -H POST -H "Content-Type: application/json" -d '{"name":"CREATED","power":"sayan","amountPeopleSaved":200 }' http://localhost:5000/heroes </code>
+<br><code>curl -H POST -H "Content-Type: application/json" -d '{"name":"Leonidas King","amountPeopleKilled":120,"folk":"test"}' http://localhost:5000/spartans </code>
+<br><code>curl -H POST -H "Content-Type: application/json" -d '{"name":"Goku God","power":"sayan","amountPeopleSaved":2000 }' http://localhost:5000/heroes </code>
 
 RETRIEVE
 <br><code>curl http://localhost:5000/heroes/ </code>
 <br><code>curl http://localhost:5000/spartans/ </code>
 
 
-RETRIEVE ONE
+GET ONE
 <br><code>curl http://localhost:5000/heroes/56800b6b01c67c194e603e23 </code>
 <br><code>curl http://localhost:5000/spartans/568564361cc5056325f52c3c </code>
+
+GET SPECIFIC MODEL
+<br><code>curl -H "Content-Type: application/json" -d '{"power":"brutal force"}' http://localhost:5000/heroes </code>
+<br><code>curl -H "Content-Type: application/json" -d '{"folk":"agoge"}' http://localhost:5000/spartans </code>
 
 
 UPDATE
