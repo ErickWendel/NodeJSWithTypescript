@@ -8,7 +8,7 @@ class SpartanRoutes {
     constructor () {
         this._spartanController = new SpartanController();   
     }
-    get routes () {
+    get routes () : express.Router {
         
         var controller = this._spartanController;
         router.get('/spartans', controller.retrieve);

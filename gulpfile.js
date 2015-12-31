@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var tsc  = require('gulp-typescript-compiler');
 var nodemon = require('gulp-nodemon');
 
-gulp.task('default', ['watch', 'nodemon']);
+gulp.task('default', ['compile', 'watch', 'nodemon']);
 
 
 gulp.task('watch', function () {
