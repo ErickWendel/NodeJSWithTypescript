@@ -1,22 +1,24 @@
 import express = require("express");
 import HeroController = require('./../../controllers/HeroController');
 
-var app = express();
-
+var router = express.Router();
 class HeroRoutes {
     private _heroController: HeroController;
     constructor () {
         this._heroController = new HeroController();   
     }
     get routes () {
-        app.get('/hero', this._heroController.retrieve);
-        app.get('/hero', this._heroController.delete);
-        app.get('/hero', this._heroController.findById);
-        app.get('/hero', this._heroController.findOne);
-        app.get('/hero', this._heroController.update);
-        app.get('/hero', this._heroController.create);
-        return app;
+        router.get('/heroes', new HeroController().retrieve);
+        router.post('/heroes', new HeroController().create);
+        router.put('/heroes', this._heroController.update);
+        router.get('/heroes/_:id', this._heroController.findById);
+        router.delete('/heroes/_:id', this._heroController.delete);
+        router.get('/heroes', this._heroController.findOne);
+        return router;
     }
     
     
 }
+
+Object.seal(HeroRoutes);
+export = HeroRoutes;

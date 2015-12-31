@@ -2,9 +2,6 @@ import SpartanRepository = require('./../repository/SpartanRepository');
 import ISpartanBusiness = require('./interfaces/ISpartanBusiness');
 import ISpartanModel = require('./../model/interfaces/ISpartanModel');
 
-import mongoose = require('mongoose');
-import ObjectId = mongoose.Types.ObjectId;
-
 class SpartanBusiness  implements ISpartanBusiness {
     private _spartanRepository: SpartanRepository;
     
@@ -20,7 +17,7 @@ class SpartanBusiness  implements ISpartanBusiness {
          this._spartanRepository.retrieve(callback);
     }
     
-    update (_id: ObjectId, item: ISpartanModel, callback: (error: any, result: any) => void) {
+    update (_id: string, item: ISpartanModel, callback: (error: any, result: any) => void) {
         this._spartanRepository.findOne({name: name}, (err, res) => {
             if(err) callback(err, res);
             
@@ -31,11 +28,11 @@ class SpartanBusiness  implements ISpartanBusiness {
         });    
     }
     
-    delete (_id: ObjectId, callback:(error: any, result: any) => void) {
+    delete (_id: string, callback:(error: any, result: any) => void) {
         this._spartanRepository.delete(_id, callback);
     }
     
-    findById (_id: ObjectId, callback: (error: any, result: ISpartanModel) => void) {
+    findById (_id: string, callback: (error: any, result: ISpartanModel) => void) {
         this._spartanRepository.findById(_id, callback);
     }
     findOne (item: Object, callback: (error: any, result: ISpartanModel) => void ) {

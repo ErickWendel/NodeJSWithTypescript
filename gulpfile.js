@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var tsc  = require('gulp-typescript-compiler');
-gulp.task('default', ['compile', 'watch']);
+var nodemon = require('gulp-nodemon');
+
+gulp.task('default', ['watch', 'nodemon']);
 
 
 gulp.task('watch', function () {
@@ -9,7 +11,7 @@ gulp.task('watch', function () {
 
 gulp.task('compile', function () {
   return gulp
-    .src('src/**/*.ts')
+    .src('src/**/*.ts') 
     .pipe(tsc({
         module: 'commonjs',
         target: 'ES5',
@@ -17,4 +19,8 @@ gulp.task('compile', function () {
         logErrors: true
     }))
     .pipe(gulp.dest('lib'));
+});
+
+gulp.task('nodemon', function () {
+  nodemon({ script: 'lib/index.js' });
 });

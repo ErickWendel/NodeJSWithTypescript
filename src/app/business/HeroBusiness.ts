@@ -1,9 +1,9 @@
+/// <reference path="../../../typings/tsd.d.ts" />
 import HeroRepository = require('./../repository/HeroRepository');
 import IHeroBusiness = require('./interfaces/IHeroBusiness');
 import IHeroModel = require('./../model/interfaces/IHeroModel');
 import HeroModel = require('./../model/HeroModel');
-import mongoose = require ('mongoose');
-import ObjectId = mongoose.Types.ObjectId;
+
 
 class HeroBusiness  implements IHeroBusiness {
     private _heroRepository: HeroRepository;
@@ -20,7 +20,7 @@ class HeroBusiness  implements IHeroBusiness {
          this._heroRepository.retrieve(callback);
     }
     
-    update (_id: ObjectId, item: IHeroModel, callback: (error: any, result: any) => void) {
+    update (_id: string, item: IHeroModel, callback: (error: any, result: any) => void) {
         this._heroRepository.findOne({name: name}, (err, res) => {
             if(err) callback(err, res);
             
@@ -30,14 +30,12 @@ class HeroBusiness  implements IHeroBusiness {
                 }
         });    
     }
-        
     
-    
-    delete (_id: ObjectId, callback:(error: any, result: any) => void) {
-        this._heroRepository.delete(_id, callback);
+    delete (_id: string, callback:(error: any, result: any) => void) {
+        this._heroRepository.delete(_id , callback);
     }
     
-    findById (_id: ObjectId, callback: (error: any, result: IHeroModel) => void) {
+    findById (_id: string, callback: (error: any, result: IHeroModel) => void) {
         this._heroRepository.findById(_id, callback);
     }
     findOne(item: Object, callback: (error: any, result: IHeroModel) => void) {
