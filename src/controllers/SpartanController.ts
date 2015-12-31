@@ -24,7 +24,7 @@ class SpartanController implements IBaseController <SpartanBusiness> {
     update(req: express.Request, res: express.Response): void {
         try {
              var spartan: ISpartanModel = <ISpartanModel>req.body;
-             var _id: string = req.body.id;
+             var _id: string = req.params._id;
              var spartanBusiness = new SpartanBusiness();
                 spartanBusiness.update(_id, spartan, (error, result) => {
                     if(error) res.send({"error": "error"});
@@ -38,7 +38,7 @@ class SpartanController implements IBaseController <SpartanBusiness> {
     delete(req: express.Request, res: express.Response): void {
         try {
                 
-             var _id: string = req.body.id;
+             var _id: string = req.params._id;
              var spartanBusiness = new SpartanBusiness();
                 spartanBusiness.delete(_id, (error, result) => {
                     if(error) res.send({"error": "error"});
@@ -79,9 +79,9 @@ class SpartanController implements IBaseController <SpartanBusiness> {
     }
     findOne(req: express.Request, res: express.Response): void {
         try {
-             var name: string = req.body;
+             var item: ISpartanModel = <ISpartanModel>req.body;
              var spartanBusiness = new SpartanBusiness();
-                spartanBusiness.findOne({'name': name}, (error, result) => {
+                spartanBusiness.findOne(item, (error, result) => {
                     if(error) res.send({"error": "error"});
                     else res.send(result);
                 });  

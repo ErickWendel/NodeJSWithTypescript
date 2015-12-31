@@ -24,7 +24,7 @@ class HeroController implements IBaseController <HeroBusiness> {
     update(req: express.Request, res: express.Response): void {
         try {
              var hero: IHeroModel = <IHeroModel>req.body;
-             var _id: string = req.body.id;
+             var _id: string = req.params._id;
              var heroBusiness = new HeroBusiness();
                 heroBusiness.update(_id, hero, (error, result) => {
                     if(error) res.send({"error": "error"});
@@ -38,7 +38,7 @@ class HeroController implements IBaseController <HeroBusiness> {
     delete(req: express.Request, res: express.Response): void {
         try {
                 
-             var _id: string = req.body.id;
+             var _id: string = req.params._id;
              var heroBusiness = new HeroBusiness();
                 heroBusiness.delete(_id, (error, result) => {
                     if(error) res.send({"error": "error"});
@@ -78,9 +78,9 @@ class HeroController implements IBaseController <HeroBusiness> {
     }
     findOne(req: express.Request, res: express.Response): void {
         try {
-             var name: string = req.body;
+             var hero: Object = req.body;
              var heroBusiness = new HeroBusiness();
-                heroBusiness.findOne({'name': name}, (error, result) => {
+                heroBusiness.findOne(hero, (error, result) => {
                     if(error) res.send({"error": "error"});
                     else res.send(result);
                 });  

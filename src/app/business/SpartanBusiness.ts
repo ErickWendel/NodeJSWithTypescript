@@ -18,13 +18,11 @@ class SpartanBusiness  implements ISpartanBusiness {
     }
     
     update (_id: string, item: ISpartanModel, callback: (error: any, result: any) => void) {
-        this._spartanRepository.findOne({name: name}, (err, res) => {
+        this._spartanRepository.findById(_id, (err, res) => {
             if(err) callback(err, res);
-            
-            else {
-                    this._spartanRepository.update(res._id, item, callback);
-                    
-                }
+            else 
+                this._spartanRepository.update(res._id, item, callback);
+                
         });    
     }
     

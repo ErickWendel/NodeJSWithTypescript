@@ -23,6 +23,7 @@
     "gulp-strip-debug": "^1.1.0",
     "gulp-tsc": "^1.1.4",
     "gulp-typescript-compiler": "^1.0.1",
+    "method-override": "^2.3.5",
     "mongojs": "^2.2.2",
     "mongoose": "^4.3.4"
   }
