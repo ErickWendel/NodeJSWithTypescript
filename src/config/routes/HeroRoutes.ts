@@ -4,16 +4,18 @@ import HeroController = require('./../../controllers/HeroController');
 var router = express.Router();
 class HeroRoutes {
     private _heroController: HeroController;
+    
     constructor () {
         this._heroController = new HeroController();   
     }
     get routes () {
-        router.get('/heroes', new HeroController().retrieve);
-        router.post('/heroes', new HeroController().create);
-        router.put('/heroes', this._heroController.update);
-        router.get('/heroes/_:id', this._heroController.findById);
-        router.delete('/heroes/_:id', this._heroController.delete);
-        router.get('/heroes', this._heroController.findOne);
+        var controller = this._heroController;
+        router.get('/heroes', controller.retrieve);
+        router.post('/heroes', controller.create);
+        router.put('/heroes/:_id', controller.update);
+        router.get('/heroes/:_id', controller.findById);
+        router.delete('/heroes/:_id', controller.delete);
+        router.get('/heroes', controller.findOne);
         return router;
     }
     

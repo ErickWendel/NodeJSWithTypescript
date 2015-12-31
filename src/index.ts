@@ -6,11 +6,8 @@
        
     var app = express();
     var port = parseInt(process.env.PORT, 10) || 5000;
-    app.set("port", port);
+//    app.set("port", port);
 
-    app.get("/", (request:express.Request, response:express.Response) => {
-        response.send("Hello World!");
-    });
     app.use(bodyParser.json());
     app.use(new BaseRoutes().routes);
     
