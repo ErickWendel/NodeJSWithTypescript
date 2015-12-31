@@ -65,11 +65,12 @@ class SpartanController implements IBaseController <SpartanBusiness> {
     findById(req: express.Request, res: express.Response): void {
         try {
              
-             var _id: string = req.body.id;
+             var _id: string = req.params._id;
+
              var spartanBusiness = new SpartanBusiness();
                 spartanBusiness.findById(_id, (error, result) => {
                     if(error) res.send({"error": "error"});
-                    else res.send({"success": "success"});
+                    else res.send(result);
                 });   
             }
             catch (e)  {
