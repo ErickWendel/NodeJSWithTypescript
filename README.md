@@ -18,6 +18,11 @@ Tools:
 
 Convention Refs: <br />
    <a href="https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines" target="_blank"> Coding guidelines Typescript - Microsoft</a> 
+   
+Pré Requisites: <br />
+ - NodeJS
+ - MongoDB
+ - VSCode
 
 Run:
    <br><code>  > npm install </code>
