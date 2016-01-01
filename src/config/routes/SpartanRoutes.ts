@@ -16,7 +16,7 @@ class SpartanRoutes {
         router.put("/spartans/:_id", controller.update);
         router.get("/spartans/:_id", controller.findById);
         router.delete("/spartans/:_id", controller.delete);
-        router.get("/spartans", controller.findOne);
+       
         return router;
     }
      
