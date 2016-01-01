@@ -76,21 +76,7 @@ class HeroController implements IBaseController <HeroBusiness> {
                 console.log(e);
             }
     }
-    findOne(req: express.Request, res: express.Response): void {
-        try {
-            console.log('PASSOU');
-             var hero: IHeroModel = <IHeroModel>req.body;
-             console.log('HERO', hero);
-             var heroBusiness = new HeroBusiness();
-                heroBusiness.findOne(hero, (error, result) => {
-                    if(error) res.send({"error": "error"});
-                    else res.send(result);
-                });  
-            }
-            catch (e)  {
-                console.log(e);
-            }
-    }
+    
         
 }
 export = HeroController;    

@@ -4,7 +4,6 @@ For learning typescript, this project describes the application, at  Spartans an
 Patterns and Principles in this project:
 
 - Generic Repository Pattern
-- Abstract Factory Pattern (In Refactoring proccess)
 - Singleton Pattern
 - Multi-layer Architecture Pattern
 - SOLID Principles (In Refactoring proccess)
