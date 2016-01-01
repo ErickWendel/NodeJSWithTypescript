@@ -14,7 +14,6 @@
   },
   "homepage": "https://github.com/ErickWendel/Learning.NodeJSWithTypescript#readme",
   "devDependencies": {
-    "bluebird": "^3.1.1",
     "body-parser": "^1.14.2",
     "clear": "0.0.1",
     "connect": "^3.4.0",
