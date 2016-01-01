@@ -20,44 +20,82 @@ Convention Refs:
    <a href="https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines" target="_blank"> Coding guidelines Typescript - Microsoft</a> 
 
 Run:
-   <br><code> npm install </code>
+   <br><code>  > npm install </code>
     
    if not executing from VSCode: 
-   <br><code> gulp </code>
+   <br><code> > gulp </code>
 
-Execution from terminal (OS X):
+<h2> REST API Definitions: </h2>
 
-CREATE
+
+CREATE <br />
+   <code> > METHOD: POST </code> <br />
+   <code> > PARAMS: {"name":"Leonidas King","amountPeopleKilled":120,"folk":"agoge"} </code> <br />
+   <code> > URL: http://localhost:5000/spartans </code> <br />
+   <code> > RETURN: success or error </code> <br />
 <br />
-<code>curl -H POST -H "Content-Type: application/json" -d '{"name":"Leonidas King","amountPeopleKilled":120,"folk":"test"}' <br> http://localhost:5000/spartans </code>
-
 <br />
-<code>curl -H POST -H "Content-Type: application/json" -d '{"name":"Goku God","power":"sayan","amountPeopleSaved":2000 }' http://localhost:5000/heroes </code>
-
-RETRIEVE
-<br /><code>curl http://localhost:5000/heroes/ </code>
-<br /><code>curl http://localhost:5000/spartans/ </code>
-
-
-GET ONE
-<br /><code>curl http://localhost:5000/heroes/56800b6b01c67c194e603e23 </code>
-<br /><code>curl http://localhost:5000/spartans/568564361cc5056325f52c3c </code>
-
-
-UPDATE
-
+   <code> > METHOD: POST </code> <br />
+   <code> > PARAMS: {"name":"Goku God","power":"sayan","amountPeopleSaved":2000 } </code> <br />
+   <code> > URL: http://localhost:5000/heroes </code> <br />
+   <code> > RETURN: success or error </code> <br />
 <br />
-<code>curl -H "Content-Type: application/json" -H "X-HTTP-Method-Override: PUT" -d '{"name":"UPDATED","power":"sayan","amountPeopleSaved":200 }' http://localhost:5000/heroes/56800afbf34739a94da174f0 </code>
+<br />    
 
+RETRIEVE <br />
+   <code> > METHOD: GET </code> <br />
+   <code> > URL: http://localhost:5000/heroes/ </code> <br />
+   <code> > RETURN: [{"name":"Goku God","power":"sayan","amountPeopleSaved":2000 }]</code> <br />
 <br />
-<code>curl -H "Content-Type: application/json" -H "X-HTTP-Method-Override: PUT" -d '{"name":"UPDATED","amountPeopleKilled":2,"folk":"test"}' http://localhost:5000/spartans/567f774f4f5e68533ae2028f </code>
-
-
-DELETE
-
 <br />
-<code>curl -X POST -H "X-HTTP-Method-Override: DELETE" http://localhost:5000/heroes/56800b6b01c67c194e603e23 </code>
-<code>curl -X POST -H "X-HTTP-Method-Override: DELETE" http://localhost:5000/spartans/568564361cc5056325f52c3c </code>
+  <code> > METHOD: GET </code> <br />
+   <code> > URL: http://localhost:5000/spartans/ </code> <br />
+   <code> > RETURN: [{"name":"Leonidas King","amountPeopleKilled":120,"folk":"agoge"}] </code> <br />
+<br />
+<br />
+
+GET ONE <br />
+   <code> > METHOD: GET </code> <br />
+   <code> > URL: http://localhost:5000/heroes/56800b6b01c67c194e603e23 </code> <br />
+   <code> > RETURN: {"name":"Goku God","power":"sayan","amountPeopleSaved":2000 } </code> <br />
+   <code> > OBSERVATIONS: for this request, use item id in url (56800b6b01c67c194e603e23) </code>
+<br />
+<br />
+   <code> > METHOD: GET </code> <br />
+   <code> > URL: http://localhost:5000/spartans/568564361cc5056325f52c3c </code> <br />
+   <code> > RETURN: {"name":"Leonidas King","amountPeopleKilled":120,"folk":"agoge"} </code> <br />
+   <code> > OBSERVATIONS: for this request, use item id in url (568564361cc5056325f52c3c) </code>
+<br />
+<br />
+
+UPDATE <br />
+   <code> > METHOD: PUT </code> <br />
+   <code> > PARAMS: {"name":"UPDATED","power":"sayan","amountPeopleSaved":200 } </code> <br />
+   <code> > URL: http://localhost:5000/heroes/56800afbf34739a94da174f0 </code> <br />
+   <code> > RETURN: success or error </code> <br />
+   <code> > OBSERVATIONS: for this request, use item id in url (56800afbf34739a94da174f0) </code>
+<br />
+<br />
+   <code> > METHOD: PUT </code> <br />
+   <code> > PARAMS: {"name":"UPDATED","amountPeopleKilled":2,"folk":"agoge" } </code> <br />
+   <code> > URL: http://localhost:5000/heroes/56800afbf34739a94da174f0 </code> <br />
+   <code> > RETURN: success or error </code> <br />
+   <code> > OBSERVATIONS: for this request, use item id in url (56800afbf34739a94da174f0) </code>
+<br />
+<br />
+DELETE <br />
+   <code> > METHOD: DELETE </code> <br />
+   <code> > URL: http://localhost:5000/heroes/56800afbf34739a94da174f0 </code> <br />
+   <code> > RETURN: success or error </code> <br />
+<br />
+<br />
+
+   <code> > METHOD: DELETE </code> <br />
+   <code> > URL: http://localhost:5000/spartans/568564361cc5056325f52c3c </code> <br />
+   <code> > RETURN: success or error </code> <br />
+   <code> > OBSERVATIONS: for this request, use item id in url (568564361cc5056325f52c3c) </code>
+<br /> 
+<br />
 
 
 
