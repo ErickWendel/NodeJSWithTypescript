@@ -1,7 +1,7 @@
     /// <reference path="../typings/tsd.d.ts" />
 
     import express = require("express");
-    import Middlewares = require('./config/middlewares/base/MiddlewaresBase');
+    import Middlewares = require("./config/middlewares/base/MiddlewaresBase");
     
     var app = express();
     var port = parseInt(process.env.PORT, 10) || 5000;

@@ -1,10 +1,10 @@
    /// <reference path="../../../../typings/tsd.d.ts" />
 
-import IRead = require('./../interfaces/base/IRead');
-import IWrite = require('./../interfaces/base/IWrite');
-import IHeroModel = require('./../../model/interfaces/IHeroModel');
+import IRead = require("./../interfaces/base/Read");
+import IWrite = require("./../interfaces/base/Write");
+import IHeroModel = require("./../../model/interfaces/HeroModel");
 
-import mongoose = require('mongoose');
+import mongoose = require("mongoose");
  
 class RepositoryBase<T extends mongoose.Document> implements IRead<T>, IWrite<T> {
     

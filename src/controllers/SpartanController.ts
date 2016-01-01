@@ -1,7 +1,7 @@
-import express = require('express');
-import SpartanBusiness = require('./../app/business/SpartanBusiness');
-import IBaseController = require('./interfaces/base/IBaseController');
-import ISpartanModel = require('./../app/model/interfaces/ISpartanModel');
+import express = require("express");
+import SpartanBusiness = require("./../app/business/SpartanBusiness");
+import IBaseController = require("./interfaces/base/BaseController");
+import ISpartanModel = require("./../app/model/interfaces/SpartanModel");
 
 
 

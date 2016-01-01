@@ -1,7 +1,7 @@
     /// <reference path="../../../typings/tsd.d.ts" />
 
-    import Mongoose = require('mongoose');
-    import Constants = require('./../../config/constants/Constants');
+    import Mongoose = require("mongoose");
+    import Constants = require("./../../config/constants/Constants");
     
     class DataAccess {
         static mongooseInstance: any;
@@ -15,8 +15,8 @@
             if(this.mongooseInstance) return this.mongooseInstance;
             
             this.mongooseConnection  = Mongoose.connection;
-            this.mongooseConnection.once('open', () => {
-                console.log('Conectado.');
+            this.mongooseConnection.once("open", () => {
+                console.log("Conectado ao mongodb.");
             });
             
            this.mongooseInstance = Mongoose.connect(Constants.DB_CONNECTION_STRING);

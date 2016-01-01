@@ -1,11 +1,11 @@
 /// <reference path="../../../typings/tsd.d.ts" />
-import HeroRepository = require('./../repository/HeroRepository');
-import IHeroBusiness = require('./interfaces/IHeroBusiness');
-import IHeroModel = require('./../model/interfaces/IHeroModel');
-import HeroModel = require('./../model/HeroModel');
+import HeroRepository = require("./../repository/HeroRepository");
+import IHeroBusiness = require("./interfaces/HeroBusiness");
+import IHeroModel = require("./../model/interfaces/HeroModel");
+import HeroModel = require("./../model/HeroModel");
 
 
-class HeroBusiness  implements IHeroBusiness {
+class HeroBusiness  implements HeroBusiness {
     private _heroRepository: HeroRepository;
     
     constructor () {
@@ -43,31 +43,31 @@ class HeroBusiness  implements IHeroBusiness {
     }
 }
 
-// var Hero: IHeroModel = <IHeroModel> { name: 'Hero from Business', power: 'super Power', amountPeopleSaved: 200 };
+// var Hero: IHeroModel = <IHeroModel> { name: "Hero from Business", power: "super Power", amountPeopleSaved: 200 };
 // var heroRepository = new HeroRepository();
  
 // heroRepository.create(Hero, (err, result) => {
 //     if(err)
-//         console.log('erro ao criar', err);
+//         console.log("erro ao criar", err);
 //     else 
-//         console.log('sucesso', result);
+//         console.log("sucesso", result);
 // });
 
 // heroRepository.retrieve((err, result) => {
 //    if(err)
-//         console.log('erro ao get all');
-//    else console.log('retrieve', result); 
+//         console.log("erro ao get all");
+//    else console.log("retrieve", result); 
 // });
 
 // heroRepository.findOne({name: Hero.name}, (err, res) => {
 //     if(err)
-//         console.log('error ao findOne', err);
+//         console.log("error ao findOne", err);
 //     else {
         
-//         res.power = 'sayan';
+//         res.power = "sayan";
 //         heroRepository.update(res._id, res, (erro, sucess) => {
-//             if(erro) console.log('erro ao atualizar', erro);
-//             else console.log('atualizado', sucess);
+//             if(erro) console.log("erro ao atualizar", erro);
+//             else console.log("atualizado", sucess);
               
             
 //         });

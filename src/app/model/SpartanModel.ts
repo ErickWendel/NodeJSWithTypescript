@@ -1,4 +1,4 @@
-import ISpartanModel = require('./interfaces/ISpartanModel');
+import ISpartanModel = require("./interfaces/SpartanModel");
 
 class SpartanModel {
    private _spartanModel: ISpartanModel;

@@ -1,8 +1,8 @@
-import express = require('express');
-import bodyParser = require('body-parser');
+import express = require("express");
+import bodyParser = require("body-parser");
 
-import MethodOverride = require('./../MethodOverride');
-import BaseRoutes = require('./../../routes/base/BaseRoutes'); 
+import MethodOverride = require("./../MethodOverride");
+import BaseRoutes = require("./../../routes/base/BaseRoutes"); 
 
 
 class MiddlewaresBase {

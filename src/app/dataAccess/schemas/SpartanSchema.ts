@@ -1,5 +1,5 @@
-import DataAccess = require('./../../data_access/DataAccess');
-import ISpartanModel = require('./../../model/interfaces/ISpartanModel');
+import DataAccess = require("./../../dataAccess/DataAccess");
+import ISpartanModel = require("./../../model/interfaces/SpartanModel");
 
 var mongoose = DataAccess.mongooseInstance;
 var mongooseConnection = DataAccess.mongooseConnection;
@@ -25,5 +25,5 @@ class SpartanSchema {
         return schema;
     }
 }
-var schema = mongooseConnection.model<ISpartanModel>('Spartan', SpartanSchema.schema);
+var schema = mongooseConnection.model<ISpartanModel>("Spartan", SpartanSchema.schema);
 export = schema;

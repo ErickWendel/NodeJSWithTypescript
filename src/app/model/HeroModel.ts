@@ -1,4 +1,4 @@
-import IHeroModel = require('./interfaces/IHeroModel');
+import IHeroModel = require("./interfaces/HeroModel");
 
 class HeroModel {
    

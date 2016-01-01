@@ -1,10 +1,10 @@
 /// <reference path="../../../../typings/tsd.d.ts" />
-import mongoose = require('mongoose');
+import mongoose = require("mongoose");
 
-interface IHeroModel extends mongoose.Document {
+interface HeroModel extends mongoose.Document {
   power: string;
   amountPeopleSaved: number;
   name: string;
 }
 
-export = IHeroModel;
+export = HeroModel;
