@@ -33,9 +33,7 @@ class SpartanBusiness  implements ISpartanBusiness {
     findById (_id: string, callback: (error: any, result: ISpartanModel) => void) {
         this._spartanRepository.findById(_id, callback);
     }
-    findOne (item: Object, callback: (error: any, result: ISpartanModel) => void ) {
-        this._spartanRepository.findOne(item, callback);
-    }
+    
 }
 Object.seal(SpartanBusiness);
 export = SpartanBusiness;

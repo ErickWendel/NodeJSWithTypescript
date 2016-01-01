@@ -15,7 +15,7 @@ class HeroRoutes {
         router.put("/heroes/:_id", controller.update);
         router.get("/heroes/:_id", controller.findById);
         router.delete("/heroes/:_id", controller.delete);
-        router.get("/heroes", controller.findOne);
+        router.post("/heroes", controller.findOne);
         return router;
     }
     

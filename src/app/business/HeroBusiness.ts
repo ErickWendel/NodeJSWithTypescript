@@ -38,44 +38,8 @@ class HeroBusiness  implements HeroBusiness {
     findById (_id: string, callback: (error: any, result: IHeroModel) => void) {
         this._heroRepository.findById(_id, callback);
     }
-    findOne(item: Object, callback: (error: any, result: IHeroModel) => void) {
-        this._heroRepository.findOne(item, callback);
-    }
+    
 }
-
-// var Hero: IHeroModel = <IHeroModel> { name: "Hero from Business", power: "super Power", amountPeopleSaved: 200 };
-// var heroRepository = new HeroRepository();
- 
-// heroRepository.create(Hero, (err, result) => {
-//     if(err)
-//         console.log("erro ao criar", err);
-//     else 
-//         console.log("sucesso", result);
-// });
-
-// heroRepository.retrieve((err, result) => {
-//    if(err)
-//         console.log("erro ao get all");
-//    else console.log("retrieve", result); 
-// });
-
-// heroRepository.findOne({name: Hero.name}, (err, res) => {
-//     if(err)
-//         console.log("error ao findOne", err);
-//     else {
-        
-//         res.power = "sayan";
-//         heroRepository.update(res._id, res, (erro, sucess) => {
-//             if(erro) console.log("erro ao atualizar", erro);
-//             else console.log("atualizado", sucess);
-              
-            
-//         });
-//     } 
-// });
-
-
-
 
 
 Object.seal(HeroBusiness);

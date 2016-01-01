@@ -77,19 +77,7 @@ class SpartanController implements IBaseController <SpartanBusiness> {
                 console.log(e);
             }
     }
-    findOne(req: express.Request, res: express.Response): void {
-        try {
-             var item: ISpartanModel = <ISpartanModel>req.body;
-             var spartanBusiness = new SpartanBusiness();
-                spartanBusiness.findOne(item, (error, result) => {
-                    if(error) res.send({"error": "error"});
-                    else res.send(result);
-                });  
-            }
-            catch (e)  {
-                console.log(e);
-            }
-    }
+    
         
 }
 export = SpartanController;    

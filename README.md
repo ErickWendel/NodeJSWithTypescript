@@ -18,6 +18,8 @@ Tools:
 - GulpJS
 - VSCode Task Runners
 
+Convention Refs:
+   <a href="https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines" target="_blank"> Coding guidelines Typescript - Microsoft</a> 
 
 Run:
    <br><code> npm install </code>
@@ -42,11 +44,6 @@ RETRIEVE
 GET ONE
 <br /><code>curl http://localhost:5000/heroes/56800b6b01c67c194e603e23 </code>
 <br /><code>curl http://localhost:5000/spartans/568564361cc5056325f52c3c </code>
-
-GET SPECIFIC MODEL
-
-<br /><code>curl -H "Content-Type: application/json" -d '{"power":"brutal force"}' http://localhost:5000/heroes </code>
-<br /><code>curl -H "Content-Type: application/json" -d '{"folk":"agoge"}' http://localhost:5000/spartans </code>
 
 
 UPDATE
