@@ -6,7 +6,6 @@ Patterns and Principles in this project:
 - Generic Repository Pattern
 - Singleton Pattern
 - Multi-layer Architecture Pattern
-- SOLID Principles (In Refactoring proccess)
 
 Tools:
 - NodeJS
