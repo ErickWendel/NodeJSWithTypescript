@@ -6,16 +6,16 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "node/node.d.ts": {
-      "commit": "4c41545030eba44b27ce7209112dbf862f6b1d78"
+      "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
     },
     "express/express.d.ts": {
-      "commit": "4c41545030eba44b27ce7209112dbf862f6b1d78"
+      "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
     },
     "serve-static/serve-static.d.ts": {
-      "commit": "4c41545030eba44b27ce7209112dbf862f6b1d78"
+      "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
     },
     "mime/mime.d.ts": {
-      "commit": "4c41545030eba44b27ce7209112dbf862f6b1d78"
+      "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
     },
     "mongoose/mongoose.d.ts": {
       "commit": "5e960679e6f9ae6ce905b1db0ad36fc189cd2eca"
@@ -25,6 +25,12 @@
     },
     "connect/connect.d.ts": {
       "commit": "dc9dabe74a5be62613b17a3605309783a12ff28a"
+    },
+    "bluebird/bluebird.d.ts": {
+      "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
+    },
+    "method-override/method-override.d.ts": {
+      "commit": "fe563dff3428bac1260d1794e2c2ecf8f097535a"
     }
   }
 }
