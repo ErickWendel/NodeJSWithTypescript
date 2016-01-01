@@ -19,6 +19,8 @@ class HeroController implements IBaseController <HeroBusiness> {
             }
             catch (e)  {
                 console.log(e);
+                res.send({"error": "error in your request"});
+
             }
     }
     update(req: express.Request, res: express.Response): void {
@@ -33,6 +35,8 @@ class HeroController implements IBaseController <HeroBusiness> {
             }
             catch (e)  {
                 console.log(e);
+                res.send({"error": "error in your request"});
+
             }
     }
     delete(req: express.Request, res: express.Response): void {
@@ -47,6 +51,8 @@ class HeroController implements IBaseController <HeroBusiness> {
             }
             catch (e)  {
                 console.log(e);
+                res.send({"error": "error in your request"});
+
             }
     }
     retrieve(req: express.Request, res: express.Response): void {
@@ -60,6 +66,8 @@ class HeroController implements IBaseController <HeroBusiness> {
             }
             catch (e)  {
                 console.log(e);
+                res.send({"error": "error in your request"});
+
             }
     }
     findById(req: express.Request, res: express.Response): void {
@@ -74,6 +82,8 @@ class HeroController implements IBaseController <HeroBusiness> {
             }
             catch (e)  {
                 console.log(e);
+                res.send({"error": "error in your request"});
+                
             }
     }
     
