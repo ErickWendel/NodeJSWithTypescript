@@ -5,7 +5,7 @@ import IHeroModel = require("./../model/interfaces/HeroModel");
 import HeroModel = require("./../model/HeroModel");
 
 
-class HeroBusiness  implements HeroBusiness {
+class HeroBusiness  implements IHeroBusiness {
     private _heroRepository: HeroRepository;
     
     constructor () {
